@@ -214,7 +214,7 @@ button {
 
 .hero-title {
   margin: 0;
-  width: 426px;
+  width: 429px;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.5;
@@ -506,4 +506,127 @@ button {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--white);
+}
+
+.footer {
+  padding: 60px 8px;
+  background-color: var(--white);
+}
+
+.footer-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 60px;
+}
+
+.footer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 204px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--content-bg);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-card:hover {
+  background-color: #dfe8ef;
+  transform: translateY(-4px);
+}
+
+.footer-card:hover .footer-card-title,
+.footer-card:hover .footer-card-text {
+  color: var(--primary);
+}
+
+.footer-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon img {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.footer-card-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.footer-card-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.52;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 70, 70, 0.1);
+}
+
+.footer-copy {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.48;
+  text-align: center;
+}
+
+.footer-school {
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.footer-school:hover {
+  color: var(--primary);
 }
