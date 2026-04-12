@@ -22,7 +22,6 @@ html {
 
 body {
   margin: 0;
-  min-width: 1440px;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
   color: var(--dark);
@@ -43,14 +42,15 @@ button {
 }
 
 .page {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: var(--white);
 }
 
 .container {
-  width: 1276px;
+  max-width: 1276px;
   margin: 0 auto;
+  padding: 0 8px;
 }
 
 .caption {
