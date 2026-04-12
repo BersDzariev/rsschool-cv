@@ -289,6 +289,7 @@ button {
   background-image: url("../christmas-shop/images/bg-snow.png");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .slider-section .section-title {
@@ -297,7 +298,7 @@ button {
 
 .slider-row {
   margin-top: 20px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .slider-track {
@@ -313,6 +314,7 @@ button {
   line-height: 1;
   text-transform: uppercase;
   color: var(--white);
+  flex-shrink: 0;
 }
 
 .slider-image {
@@ -320,6 +322,7 @@ button {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .slider-buttons {
@@ -748,11 +751,9 @@ button {
   .about-image-box {
     height: auto;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .nav {
     display: none;
   }
@@ -789,13 +790,23 @@ button {
     height: 528px;
   }
 
+  .slider-row {
+    overflow: hidden;
+  }
+
+  .slider-track {
+    gap: 16px;
+  }
+
   .slider-word {
     font-size: 48px;
+    flex-shrink: 0;
   }
 
   .slider-image {
     width: 160px;
     height: 160px;
+    flex-shrink: 0;
   }
 
   .cards-grid {
@@ -832,13 +843,13 @@ button {
   }
 }
 
-@media (max-width: 650px){
-  .cards-grid{
+@media (max-width: 650px) {
+  .cards-grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  .gift-card{
+  .gift-card {
     width: 310px;
   }
 }
@@ -885,19 +896,6 @@ button {
   .about-image-box {
     width: 100%;
     height: 528px;
-  }
-
-  .slider-row {
-    overflow: hidden;
-  }
-
-  .slider-word {
-    font-size: 36px;
-  }
-
-  .slider-image {
-    width: 144px;
-    height: 144px;
   }
 
   .cards-grid {
