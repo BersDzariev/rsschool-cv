@@ -22,7 +22,6 @@ html {
 
 body {
   margin: 0;
-  min-width: 1440px;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
   color: var(--dark);
@@ -43,13 +42,13 @@ button {
 }
 
 .page {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: var(--white);
 }
 
 .container {
-  width: 1276px;
+  max-width: 1276px;
   margin: 0 auto;
 }
 
@@ -188,6 +187,27 @@ button {
   cursor: default;
 }
 
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.burger__line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--dark);
+  border-radius: 2px;
+}
+
 .hero {
   height: 524px;
   padding: 60px 8px;
@@ -206,7 +226,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 426px;
+  width: 100%;
+  max-width: 426px;
   height: 100%;
   margin: 0 auto;
   gap: 12px;
@@ -234,13 +255,14 @@ button {
 
 .about-card {
   display: flex;
+  width: 100%;
   overflow: hidden;
   border-radius: 20px;
   background-color: var(--white);
 }
 
 .about-text {
-  width: 638px;
+  width: 50%;
   padding: 100px 60px;
   display: flex;
   flex-direction: column;
@@ -249,13 +271,15 @@ button {
 }
 
 .about-image-box {
-  width: 638px;
+  width: 50%;
   height: 528px;
+  overflow: hidden;
 }
 
 .about-image {
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   object-fit: cover;
 }
 .slider-section {
@@ -264,6 +288,7 @@ button {
   background-image: url("../christmas-shop/images/bg-snow.png");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .slider-section .section-title {
@@ -272,7 +297,6 @@ button {
 
 .slider-row {
   margin-top: 20px;
-  overflow: visible;
 }
 
 .slider-track {
@@ -288,6 +312,7 @@ button {
   line-height: 1;
   text-transform: uppercase;
   color: var(--white);
+  flex-shrink: 0;
 }
 
 .slider-image {
@@ -295,6 +320,7 @@ button {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .slider-buttons {
@@ -451,12 +477,12 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 426px;
+  width: 100%;
+  max-width: 426px;
   height: 100%;
   margin: 0 auto;
   gap: 20px;
 }
-
 .cta-title {
   text-align: center;
 }
@@ -519,7 +545,8 @@ button {
 }
 
 .gifts-title {
-  width: 426px;
+  width: 100%;
+  max-width: 426px;
   margin: 0 auto 20px;
   font-size: 32px;
   font-weight: 600;
@@ -694,4 +721,240 @@ button {
 
 .footer-school:hover {
   color: var(--primary);
+}
+
+@media (max-width: 1439px) {
+  .page {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 310px);
+    justify-content: center;
+  }
+
+  .footer-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text,
+  .about-image-box {
+    width: 100%;
+  }
+
+  .about-image-box {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header-container {
+    min-height: 64px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 572px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 60px 20px;
+  }
+
+  .about-image-box {
+    width: 100%;
+    height: 528px;
+  }
+
+  .slider-row {
+    overflow: hidden;
+  }
+
+  .slider-track {
+    gap: 16px;
+  }
+
+  .slider-word {
+    font-size: 48px;
+    flex-shrink: 0;
+  }
+
+  .slider-image {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 310px);
+    justify-content: center;
+  }
+
+  .cta {
+    height: auto;
+    min-height: 668px;
+  }
+
+  .cta-content {
+    max-width: 364px;
+  }
+
+  .gifts-main {
+    min-height: auto;
+  }
+
+  .gifts-title {
+    max-width: 364px;
+    font-size: 24px;
+  }
+
+  .tabs {
+    width: 100%;
+    max-width: 474px;
+    flex-wrap: wrap;
+  }
+
+  .footer-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .gift-card {
+    width: 310px;
+  }
+
+  .about-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 572px;
+    padding: 60px 8px;
+  }
+
+  .hero-content {
+    max-width: 364px;
+  }
+
+  .hero-title {
+    max-width: 364px;
+    font-size: 32px;
+  }
+
+  .about-card {
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 60px 20px;
+  }
+
+  .about-title,
+  .dark-text,
+  .paragraph {
+    width: 100%;
+    max-width: 324px;
+  }
+
+  .about-image-box {
+    width: 100%;
+    height: 528px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .gift-card {
+    width: 310px;
+  }
+
+  .cta {
+    min-height: 704px;
+    padding: 60px 8px;
+  }
+
+  .cta-content {
+    max-width: 364px;
+  }
+
+  .timer {
+    width: 100%;
+    max-width: 364px;
+    flex-wrap: wrap;
+  }
+
+  .timer-item {
+    width: 50%;
+  }
+
+  .timer-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .gifts-title {
+    max-width: 364px;
+    font-size: 24px;
+  }
+
+  .tabs {
+    width: 100%;
+    max-width: 354px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .tab,
+  .tab-active {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .footer-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-card {
+    min-height: 204px;
+    height: auto;
+  }
+
+  .footer-card-title {
+    font-size: 18px;
+  }
 }
