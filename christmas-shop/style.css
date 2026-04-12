@@ -235,8 +235,7 @@ button {
 
 .hero-title {
   margin: 0;
-  width: 100%;
-  max-width: 426px;
+  width: 429px;
   font-size: 32px;
   font-weight: 600;
   line-height: 1.5;
@@ -298,7 +297,6 @@ button {
 
 .slider-row {
   margin-top: 20px;
-  overflow: hidden;
 }
 
 .slider-track {
@@ -772,12 +770,7 @@ button {
   }
 
   .hero-title {
-    max-width: 364px;
     font-size: 32px;
-  }
-
-  .about-card {
-    flex-direction: column;
   }
 
   .about-text {
@@ -851,6 +844,10 @@ button {
 
   .gift-card {
     width: 310px;
+  }
+
+  .about-card {
+    flex-direction: column;
   }
 }
 
